@@ -1,0 +1,22 @@
+---
+import type { IFrontmatter } from 'astro-boilerplate-components';
+import { BlogPost } from '../components/BlogPost';
+import { CTA } from '../components/CTA';
+import Base from './BaseLayout.astro';
+import { AppConfig } from '../utils/AppConfig';
+
+export interface Props {
+  content: IFrontmatter;
+}
+
+const { content } = Astro.props as Props;
+const title = `${content.title} - ${AppConfig.site_name}`;
+---
+
+<Base head={{ title, description: content.description }}>
+  <BlogPost frontmatter={content}>
+    <slot></slot>
+  </BlogPost>
+
+  <CTA />
+</Base>
