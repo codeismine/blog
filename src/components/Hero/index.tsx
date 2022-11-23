@@ -4,26 +4,21 @@ import {
   HeroSocial,
   Section,
 } from "astro-boilerplate-components";
+import { SocialIcons } from "../../utils/SocialIcons";
 
 const Hero = () => (
   <Section>
     <HeroAvatar
       title={
         <>
-          Hi there, I'm <GradientText>Ixartz</GradientText> 👋
+          Hi there, I'm <GradientText>Code.Is.Mine</GradientText> 👋
         </>
       }
       description={
         <>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus{" "}
-          <a className="text-cyan-400 hover:underline" href="/">
-            malesuada
-          </a>{" "}
-          nisi tellus, non imperdiet nisi tempor at. Lorem ipsum dolor sit amet,{" "}
-          <a className="text-cyan-400 hover:underline" href="/">
-            consectetur
-          </a>{" "}
-          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+          <span className="text-cyan-400 hover:underline">Code.Is.Mine</span>{" "}
+          provide you a blog that can be improve your knowledge with{" "}
+          <span className="text-cyan-400 hover:underline">technology</span>.
         </>
       }
       avatar={
@@ -36,30 +31,12 @@ const Hero = () => (
       }
       socialButtons={
         <>
-          <a href="/">
-            <HeroSocial
-              src="/assets/images/twitter-icon.png"
-              alt="Twitter icon"
-            />
-          </a>
-          <a href="/">
-            <HeroSocial
-              src="/assets/images/facebook-icon.png"
-              alt="Facebook icon"
-            />
-          </a>
-          <a href="/">
-            <HeroSocial
-              src="/assets/images/linkedin-icon.png"
-              alt="Linkedin icon"
-            />
-          </a>
-          <a href="/">
-            <HeroSocial
-              src="/assets/images/youtube-icon.png"
-              alt="Youtube icon"
-            />
-          </a>
+          {SocialIcons &&
+            SocialIcons.map((it) => (
+              <a href={it.url} target="_blanks">
+                <HeroSocial src={it.icon} alt={it.iconAlt} />
+              </a>
+            ))}
         </>
       }
     />

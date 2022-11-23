@@ -5,4 +5,7 @@ export const AppConfig = {
   author: 'mengsreang-chhoeung',
   locale_region: 'en-us',
   locale: 'en',
+  facebook_url: 'https://www.facebook.com/CodeIsMine',
+  youtube_url: 'https://www.youtube.com/@codeisminecim8777',
+  github_url: 'https://github.com/codeismine'
 };
