@@ -14,7 +14,7 @@ const Navbar = () => (
       <a href="/">
         <Logo
           icon={
-            <img className="w-10 h-10 rounded mr-2" src="./Logo.jpg" alt="logo" />
+            <img className="w-10 h-10 rounded mr-2" src="/Logo.jpg" alt="logo" />
           }
           name={AppConfig.title}
         />
