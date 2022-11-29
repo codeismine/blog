@@ -9,5 +9,5 @@ export const AppConfig = {
   locale: 'en',
   facebook_url: 'https://www.facebook.com/CodeIsMine',
   youtube_url: 'https://www.youtube.com/@codeisminecim8777',
-  github_url: 'https://github.com/codeismine'
+  github_url: 'https://github.com/codeismine/blog'
 };
